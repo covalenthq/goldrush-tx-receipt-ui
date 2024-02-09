@@ -28,8 +28,8 @@ export const TXProvider: React.FC<TXProviderProps> = ({ children }) => {
   const [txHash, setTxHash] = useState<string>("")
   const [chains, setChains] = useState<[]>([])
   const [tableState, setTableState] = useState({})
-  const [color, setColor] = useState<any>("slate")
-  const [borderRadius, setBorderRadius] = useState<any>("medium")
+  const [color, setColor] = useState<any>(localStorage.getItem('color') ? localStorage.getItem('color') : "slate")
+  const [borderRadius, setBorderRadius] = useState<any>(localStorage.getItem('border') ? localStorage.getItem('border') : "medium")
 
   const mode: any = theme
 

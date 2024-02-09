@@ -15,17 +15,18 @@ export default function TX({
   const router = useRouter()
 
   return (
-    <div className="w-full flex flex-col gap-4">
+    <div className="w-full flex items-center flex-col gap-4">
       <TransactionReceiptView
         chain_name={params.chain}
         tx_hash={params.tx_hash}
       />
       <Flex
+        className="w-full"
         onClick={() => {
           router.back()
         }}
       >
-        <Button>Back</Button>
+      <Button>Back</Button>
       </Flex>
     </div>
   )
