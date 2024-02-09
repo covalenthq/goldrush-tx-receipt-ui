@@ -16,12 +16,21 @@ import { TXProvider } from "@/lib/store"
 import { Toaster } from "@/components/ui/toaster"
 import { Footer } from "@/components/footer"
 import { KeyDialog } from "@/components/key-dialog"
+import { useEffect, useState } from "react"
+import {Spinner} from "@nextui-org/react";
+import { Icons } from "@/components/icons"
 
 interface RootLayoutProps {
   children: React.ReactNode
 }
 
 export default function RootLayout({ children }: RootLayoutProps) {
+  const [ready, setReady] = useState(false);
+  useEffect(()=>{
+    if(typeof window !== "undefined"){
+      setReady(true)
+    }
+  },[])
   return (
     <>
       <html lang="en" suppressHydrationWarning>
@@ -34,16 +43,23 @@ export default function RootLayout({ children }: RootLayoutProps) {
         >
           <Theme>
             <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-              <TXProvider>
                 <div className="relative flex min-h-screen flex-col">
                   <SiteHeader />
-                  <div className="flex-1">{children}</div>
+                    {ready ?
+                      <TXProvider>
+                        <div className="flex-1">{children}</div>
+                      </TXProvider>
+                    :
+                    <div className="min-h-screen flex items-center justify-center">    
+                      <Icons.spinner className="mr-2 h-8 w-8 animate-spin" />
+                    </div>
+                    }
+
                   <Analytics />
                   <Footer />
                   <KeyDialog />
                   <Toaster />
                 </div>
-              </TXProvider>
             </ThemeProvider>
           </Theme>
         </body>

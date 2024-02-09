@@ -34,6 +34,7 @@ export default function Settings({ params }: { params: { slug: string } }) {
             }`}
             onClick={() => {
               setColor(_color)
+              localStorage.setItem('color', _color);
             }}
           />
         ))}
@@ -58,6 +59,7 @@ export default function Settings({ params }: { params: { slug: string } }) {
             }`}
             onClick={() => {
               setBorderRadius(radius)
+              localStorage.setItem('border', radius);
             }}
           >
             {radius}
