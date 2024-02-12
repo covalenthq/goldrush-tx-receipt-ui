@@ -17,7 +17,6 @@ import { Toaster } from "@/components/ui/toaster"
 import { Footer } from "@/components/footer"
 import { KeyDialog } from "@/components/key-dialog"
 import { useEffect, useState } from "react"
-import {Spinner} from "@nextui-org/react";
 import { Icons } from "@/components/icons"
 
 interface RootLayoutProps {
