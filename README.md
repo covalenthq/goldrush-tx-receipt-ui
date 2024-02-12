@@ -1,6 +1,6 @@
 <div align="center">
   <a href="https://www.covalenthq.com/products/goldrush/" target="_blank">
-    <img alt="GoldRush Transactions Receipt Banner" src="https://raw.githubusercontent.com/covalenthq/goldrush-tx-receipt-ui/main/static/grk-dex-banner.png" style="max-width: 100%;"/>
+    <img alt="GoldRush Transactions Receipt Banner" src="https://raw.githubusercontent.com/covalenthq/goldrush-tx-receipt-ui/main/static/grk-tx-banner.png" style="max-width: 100%;"/>
   </a>
   <br/>
   
@@ -26,7 +26,7 @@ Powered by <span><a href="https://github.com/covalenthq/goldrush-kit">GoldRush K
 
 ## Ready-to-use customizable template
 
-<a href="https://goldrush-nft-gallery-ui.vercel.app/">View live template</a>
+<a href="https://goldrush-uniswap-dex-dashboard.vercel.app">View live template</a>
 
 ## One-click deploy
 
