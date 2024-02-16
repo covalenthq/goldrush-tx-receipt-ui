@@ -26,7 +26,9 @@ Powered by <span><a href="https://github.com/covalenthq/goldrush-kit">GoldRush K
 
 ## Ready-to-use customizable template
 
-<a href="https://goldrush-tx-receipt-ui.vercel.app">View live template</a>
+<a href="https://goldrush-tx-receipt-ui.vercel.app" target="_blank">View live template</a>
+
+https://github.com/covalenthq/goldrush-tx-receipt-ui/assets/471422/2cbf6fda-f7f3-4f7f-81fd-65f1d9b71473
 
 ## One-click deploy
 
