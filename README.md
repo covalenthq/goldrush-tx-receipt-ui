@@ -52,12 +52,11 @@ Visit GoldRush's [component documentation](https://www.covalenthq.com/docs/unifi
 
 ## Features
 
-- Next.js 13 App Directory
-- Radix UI Primitives
-- Tailwind CSS
-- Icons from [Lucide](https://lucide.dev)
-- Dark mode with `next-themes`
-- Tailwind CSS class sorting, merging and linting.
+- Quick App Development: Accelerate the creation of apps wherever you need a customizable and detailed transaction view.
+- Stunning Designs Fast: Quickly build visually appealing designs with Tailwind CSS.
+- Streamlined Workflow: Simplify development with the power and efficiency of Next.js 13.
+- Detailed view of any transaction, plus more: Detailed view of sender and recipients, transaction fees, gas fees, exchange rates and more.
+- Integrates seamlessly with the [GoldRush Decoder](https://github.com/covalenthq/goldrush-decoder) to display transactions for literally any protocol.
 
 
 ## 🤝 Contributing
