@@ -26,7 +26,7 @@ export default function TX({
           router.back()
         }}
       >
-      <Button>Back</Button>
+        <Button>Back</Button>
       </Flex>
     </div>
   )
