@@ -16,10 +16,13 @@ export default function TX({
 
   return (
     <div className="w-full flex items-center flex-col gap-4">
-      <TransactionReceiptView
-        chain_name={params.chain}
-        tx_hash={params.tx_hash}
-      />
+      <div className="w-[50rem] min-h-[40rem]">
+        <TransactionReceiptView
+          chain_name={params.chain}
+          tx_hash={params.tx_hash}
+        />
+      </div>
+
       <Flex
         className="w-full"
         onClick={() => {
