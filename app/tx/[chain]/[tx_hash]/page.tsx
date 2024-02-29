@@ -16,7 +16,7 @@ export default function TX({
 
   return (
     <div className="w-full flex items-center flex-col gap-4">
-      <div className="w-[50rem] min-h-[40rem]">
+      <div className="w-full min-h-[40rem] relative md:w-[50rem] md:flex-row">
         <TransactionReceiptView
           chain_name={params.chain}
           tx_hash={params.tx_hash}
