@@ -8,7 +8,7 @@ import { Theme } from "@radix-ui/themes"
 
 import { fontSans } from "@/lib/fonts"
 import { cn } from "@/lib/utils"
-import { SiteHeader } from "@/components/site-header"
+import { Header } from "@/components/site-header"
 import { ThemeProvider } from "@/components/theme-provider"
 
 import "@radix-ui/themes/styles.css"
@@ -43,7 +43,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
           <Theme>
             <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
                 <div className="relative flex min-h-screen flex-col">
-                  <SiteHeader />
+                  <Header />
                     {ready ?
                       <TXProvider>
                         <div className="flex-1">{children}</div>
