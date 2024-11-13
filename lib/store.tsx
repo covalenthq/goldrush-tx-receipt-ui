@@ -1,8 +1,9 @@
 import { createContext, useState, type ReactNode } from "react"
+import kit from "@/goldrush.config"
 import { GoldRushProvider } from "@covalenthq/goldrush-kit"
 import { useTheme } from "next-themes"
 
-import { COVALENT_API_KEY } from "./utils"
+import { GOLDRUSH_API_KEY } from "./utils"
 
 interface TXContextType {
   txHash: string
@@ -24,21 +25,24 @@ interface TXProviderProps {
 }
 
 export const TXProvider: React.FC<TXProviderProps> = ({ children }) => {
-  const { theme } = useTheme()
   const [txHash, setTxHash] = useState<string>("")
   const [chains, setChains] = useState<[]>([])
   const [tableState, setTableState] = useState({})
-  const [color, setColor] = useState<any>(localStorage.getItem('color') ? localStorage.getItem('color') : "slate")
-  const [borderRadius, setBorderRadius] = useState<any>(localStorage.getItem('border') ? localStorage.getItem('border') : "medium")
-
-  const mode: any = theme
+  const [color, setColor] = useState<any>(
+    localStorage.getItem("color") ? localStorage.getItem("color") : "slate"
+  )
+  const [borderRadius, setBorderRadius] = useState<any>(
+    localStorage.getItem("border") ? localStorage.getItem("border") : "medium"
+  )
 
   return (
     <GoldRushProvider
-      apikey={COVALENT_API_KEY ? COVALENT_API_KEY : ""}
-      mode={mode}
-      color={color}
-      border_radius={borderRadius}
+      apikey={GOLDRUSH_API_KEY ? GOLDRUSH_API_KEY : ""}
+      theme={
+        localStorage.getItem("goldrush_theme")
+          ? JSON.parse(localStorage.getItem("goldrush_theme")!)
+          : kit.theme
+      }
     >
       <TXContext.Provider
         value={{

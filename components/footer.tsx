@@ -1,18 +1,36 @@
-'use client'
-import { track } from '@vercel/analytics/react';
-import { poweredCovalent } from "@/lib/svg"
+"use client"
+import { PoweredByGoldRush } from "@/lib/svg"
 
-export const Footer = () => {
-    return <footer className="bg-background  z-40 w-full border-t">
-    <a
-      onClick={() => {
-        track('covalent_cta');
-      }}
-      target="_blank"
-      href="https://www.covalenthq.com/"
-      className="container flex h-16 items-center space-x-4 sm:justify-between sm:space-x-0 "
-    >
-      {poweredCovalent}
-    </a>
-  </footer>
+export const Footer: React.FC = () => {
+  return (
+    <footer className="flex bg-background-light dark:bg-background-dark w-full items-center justify-between gap-4 py-4 px-8 border-t border-secondary-light dark:border-secondary-dark h-16 fixed bottom-0 left-0">
+      <div className="flex flex-col gap-4 gap-y-2 sm:flex-row">
+        <a
+          href="https://www.goldrush.dev/docs/api/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="font-medium leading-none hover:underline"
+        >
+          API
+        </a>
+        <a
+          href="https://github.com/covalenthq/goldrush-kit"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="font-medium leading-none hover:underline"
+        >
+          UI Kit
+        </a>
+      </div>
+
+      <a
+        href="https://www.covalenthq.com"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="flex items-center gap-2"
+      >
+        <PoweredByGoldRush />
+      </a>
+    </footer>
+  )
 }
